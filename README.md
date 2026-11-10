@@ -1,70 +1,17 @@
-# 217_ORMCleanArchitecture
-
-Praktikum 6 - CRUD **Komik** dengan Express JS, PostgreSQL, dan Sequelize menggunakan **Clean Architecture**.
-
-## Struktur Folder
-
-```
-src/
-├── domain/            # Entity & kontrak repository (aturan bisnis)
-├── application/       # Use case (CreateKomik, GetKomik, UpdateKomik, DeleteKomik)
-├── infrastructure/    # Sequelize, model, koneksi DB, implementasi repository
-├── interfaces/        # Controller & routes (HTTP layer)
-├── app.js
-└── server.js
-```
-
-## Tabel `komik`
-
-| Kolom       | Tipe                  |
-|-------------|-----------------------|
-| id          | INTEGER, PK, auto inc |
-| title       | VARCHAR, not null     |
-| description | TEXT                  |
-| author      | VARCHAR, not null     |
-
-## Cara Menjalankan
-
-```bash
-git clone https://github.com/Akmall10/217_ORMCleanArchitecture.git
-cd 217_ORMCleanArchitecture
-npm install
-cp .env.example .env     # lalu isi password PostgreSQL
-npm start
-```
-
-Database dan tabel `komik` dibuat otomatis oleh Sequelize saat server dijalankan.
-
-## Endpoint
-
-| Method | URL           | Keterangan          |
-|--------|---------------|---------------------|
-| GET    | /komik        | Ambil semua komik   |
-| GET    | /komik/:id    | Ambil satu komik    |
-| POST   | /komik        | Tambah komik        |
-| PUT    | /komik/:id    | Ubah komik          |
-| DELETE | /komik/:id    | Hapus komik         |
-
-Contoh body (POST / PUT):
-
-```json
-{
-  "title": "One Piece",
-  "description": "Petualangan Luffy mencari harta karun",
-  "author": "Eiichiro Oda"
-}
-```
+## SCREENSHOTS
 
 ## Hasil Pengujian Postman
 
 ### GET
-![GET](screenshots/get.png)
+<img width="1917" height="1078" alt="Screenshot 2026-11-10 100742" src="https://github.com/user-attachments/assets/152c88c9-7dc7-4624-a1f9-d8c6b7341478" />
+<img width="1917" height="1078" alt="Screenshot 2026-11-10 100806" src="https://github.com/user-attachments/assets/36c64991-ba3f-4177-ba46-1ff5784e4d4a" />
+
 
 ### POST
-![POST](screenshots/post.png)
+<img width="1917" height="1078" alt="Screenshot 2026-11-10 100718" src="https://github.com/user-attachments/assets/d6fc2734-de3b-4321-80af-6e14fabcb0f3" />
 
 ### PUT
-![PUT](screenshots/put.png)
+<img width="1917" height="1078" alt="image" src="https://github.com/user-attachments/assets/08b5bdc7-241c-4bef-855d-e10239bb9a4d" />
 
 ### DELETE
-![DELETE](screenshots/delete.png)
+<img width="1917" height="1078" alt="Screenshot 2026-11-10 100909" src="https://github.com/user-attachments/assets/314dd2bb-1470-4f2f-a66a-c05b2a3684b3" />
